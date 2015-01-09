@@ -1,5 +1,5 @@
 var assert = require('assert')
-  , xmpp = require('../index')
+  , xmpp = { JID : require('./jid') }
 
 describe('JID', function() {
 

@@ -1,0 +1,26 @@
+{
+  "name": "jid",
+  "version": "0.1.0",
+  "description": "JID object",
+  "main": "jid.js",
+  "scripts": {
+    "test": "mocha jid.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flosse/node-jid"
+  },
+  "keywords": [
+    "xmpp",
+    "jid"
+  ],
+  "author": "Markus Kohlhase",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flosse/node-jid/issues"
+  },
+  "homepage": "https://github.com/flosse/node-jid",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
+}
