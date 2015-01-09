@@ -4,7 +4,8 @@
   "description": "JID object",
   "main": "jid.js",
   "scripts": {
-    "test": "npm run lint && coffee -c jid.coffee && mocha jid.spec.js",
+    "compile": "coffee -c jid.coffee",
+    "test": "npm run lint && npm run compile && mocha jid.spec.js",
     "lint": "coffeelint jid.coffee"
   },
   "repository": {
