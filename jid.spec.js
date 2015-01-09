@@ -59,6 +59,13 @@ describe('JID', function() {
             })
         })
 
+        it('should correctly detect local and resouce parts (#49)', function() {
+            var j = new xmpp.JID('lloyd.watkin@somewhere/something@blah/ hello')
+            assert.equal(j.local, 'lloyd.watkin')
+            assert.equal(j.domain, 'somewhere')
+            assert.equal(j.resource, 'something@blah/ hello')
+        })
+
         try {
             // HACK: these tests fail if node-stringprep is not used
             require('node-stringprep')

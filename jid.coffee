@@ -24,8 +24,8 @@ JID = (a, b, c) ->
 JID::parseJID = (s) ->
 
   if s.indexOf('@') >= 0
-    @setLocal s.substr 0, s.lastIndexOf '@'
-    s = s.substr s.lastIndexOf('@') + 1
+    @setLocal s.substr 0, s.indexOf '@'
+    s = s.substr s.indexOf('@') + 1
 
   if s.indexOf('/') >= 0
     @setResource s.substr s.indexOf('/') + 1
