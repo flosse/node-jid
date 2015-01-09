@@ -4,7 +4,8 @@
   "description": "JID object",
   "main": "jid.js",
   "scripts": {
-    "test": "mocha jid.spec.js"
+    "test": "npm run lint && coffee -c jid.coffee && mocha jid.spec.js",
+    "lint": "coffeelint jid.coffee"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/flosse/node-jid",
   "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "coffeelint": "^1.8.1",
     "mocha": "^2.1.0"
   }
 }
