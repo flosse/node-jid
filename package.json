@@ -21,6 +21,9 @@
     "url": "https://github.com/flosse/node-jid/issues"
   },
   "homepage": "https://github.com/flosse/node-jid",
+  "dependencies": {
+    "node-stringprep": "^0.6.2"
+  },
   "devDependencies": {
     "coffee-script": "^1.8.0",
     "coffeelint": "^1.8.1",
