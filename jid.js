@@ -17,7 +17,7 @@
   JID = (function() {
     function JID(a, b, c) {
       this.local = this.domain = this.resource = null;
-      if (a && (!b) && (!c)) {
+      if (a && !(b || c)) {
         this.parseJID(a);
       } else if (b) {
         this.setLocal(a);

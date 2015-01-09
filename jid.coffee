@@ -14,7 +14,7 @@ class JID
   constructor: (a, b, c) ->
     @local = @domain = @resource = null
 
-    if a and (not b) and (not c)
+    if a and not (b or c)
       @parseJID a
     else if b
       @setLocal a
