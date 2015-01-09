@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "coffee -c jid.coffee",
     "test": "npm run lint && npm run compile && mocha jid.spec.js",
-    "lint": "coffeelint jid.coffee"
+    "lint": "coffeelint jid.coffee",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
