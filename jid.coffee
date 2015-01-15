@@ -1,4 +1,16 @@
-{ StringPrep, toUnicode }  = require 'node-stringprep'
+unless window?
+  { StringPrep, toUnicode } = require 'node-stringprep'
+
+### Fallbacks ###
+
+toUnicode ?= (require 'punycode')?.toUnicode or (a) -> a
+
+StringPrep ?= class StringPrep
+  constructor: (operation) ->
+    @prepare = (v) ->
+      switch operation
+        when "nodeprep", "nameprep" then v.toLowerCase()
+        else v
 
 ###*
 # JID implements
@@ -171,5 +183,4 @@ class JID
       .replace /\\40/g, '@'
       .replace /\\5c/g, '\\'
 
-if exports?     then  module.exports = JID
-else if window? then  window.JID = JID
+module.exports = JID
